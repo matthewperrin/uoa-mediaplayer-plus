@@ -173,7 +173,7 @@ class SPP {
 				$.anchors.mpp.screenshot = $.document.getElementById('mpp-screenshot');
 				$.anchors.mpp.play = $.document.getElementById('mpp-play');
 				$.anchors.mpp.volume = $.document.getElementById('mpp-volume');
-			})(/*!< creatempp interface */);
+			})(/*!< create mpp interface */);
 
 			resolve();
 		});
@@ -243,9 +243,9 @@ class SPP {
 		
 				// download button
 				$.anchors.mpp.download.addEventListener('click', (e) => {
-					const mp4URI = window.location.href.replace('.preview', '.mp4');
+					const mp4URI = $.window.location.href.replace('.preview', '.mp4');
 
-					window.open(mp4URI, '_blank');
+					$.window.open(mp4URI, '_blank');
 				});
 		
 				// snapshot button
@@ -317,9 +317,9 @@ class SPP {
 				|| !$.state.initialised)
 				throw new $._.SPPError('SPPSTATE');
 
-			chrome.storage.sync.get(vID, (retObj) => {
-				if (chrome.runtime.lastError) {
-					throw new $._.SPPError('SPPCSTORE', chrome.runtime.lastError.message);
+			$.chrome.storage.sync.get(vID, (retObj) => {
+				if ($.chrome.runtime.lastError) {
+					throw new $._.SPPError('SPPCSTORE', $.chrome.runtime.lastError.message);
 				} else {
 					if (typeof retObj[vID] === 'string') {
 						const rPayload = JSON.parse(retObj[vID]);
@@ -355,8 +355,8 @@ class SPP {
 
 		/// store valid keys, replacing undefined with null
 		$.chrome.storage.sync.set({[vID]: pData}, () => {
-			if (chrome.runtime.lastError)
-				throw new $._.SPPError('SPPCSTORE', chrome.runtime.lastError.message);
+			if ($.chrome.runtime.lastError)
+				throw new $._.SPPError('SPPCSTORE', $.chrome.runtime.lastError.message);
 			else
 				return;
 		});
