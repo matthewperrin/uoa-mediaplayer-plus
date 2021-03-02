@@ -1,75 +1,76 @@
 :root {
-    --ion-padding: 0px!important; /* Remove padding around outside of video */
-    --ion-background-color: black!important;
+	--ion-padding: 0px !important; /* Remove padding around outside of video */
+	--ion-background-color: black !important;
 }
 
 #video-container, video {
-    /* Make video span entire window */
-    max-width: 100%!important;
-    max-height: 100%!important;
-    height: 100vh;
+	/* Make video span entire window */
+	max-width: 100% !important;
+	max-height: 100% !important;
+	height: 100vh;
 }
 
 /* Hide massive centre playbutton */
 .shaka-play-button-container {
-    display: none!important;
+	display: none !important;
 }
 
 .shaka-bottom-controls {
-    /* Move controls further down */
-    padding-bottom: 15px!important;
+	/* Move controls further down */
+	padding-bottom: 15px !important;
 }
 
 .shaka-skim-container {
-    background: linear-gradient(to top,#000 0,rgba(0,0,0,0) 70px)!important;
+	background: linear-gradient(to top,#000 0,rgba(0,0,0,0) 70px) !important;
 }
+
 .shaka-controls-button-panel, .shaka-seek-bar-container, .shaka-skim-container {
-    transition: opacity linear 0.2s!important;
-    -webkit-transition: opacity linear 0.2s!important;
+	transition: opacity linear 0.2s !important;
+	-webkit-transition: opacity linear 0.2s !important;
 }
 
 .shaka-settings-menu {
-    /* Move the settings dropdown up */
-    right: 45px!important;
-    bottom: 80px!important;
+	/* Move the settings dropdown up */
+	right: 45px !important;
+	bottom: 80px !important;
 }
 
 .shaka-volume-bar-container {
-    margin-right: 30px;
+	margin-right: 30px;
 }
 
 #mpp-action-popup {
-    display: block;
-    margin: auto;
-    width: 190px;
-    position: absolute;
-    top: 20px;
-    left: calc(50% - 90px);
-    z-index: 1;
-    background-color: rgba(0,0,0,0.7);
-    color: white;
-    padding: 10px;
-    padding-top: 5px;
-    text-align: center;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 39px;
-    opacity: 0;
-    transition: opacity 0.05s;
+	display: block;
+	margin: auto;
+	width: 190px;
+	position: absolute;
+	top: 20px;
+	left: calc(50% - 90px);
+	z-index: 1;
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	padding: 10px;
+	padding-top: 5px;
+	text-align: center;
+	border-radius: 15px;
+	font-weight: bold;
+	font-size: 39px;
+	opacity: 0;
+	transition: opacity 0.05s;
 }
 
 .show-action-popup {
-    opacity: 1!important;
+	opacity: 1 !important;
 }
 
 #mpp-action-popup .material-icons {
-    font-size: 50px;
-    width: 100%;
+	font-size: 50px;
+	width: 100%;
 }
 
 #mpp-action-popup p {
-    margin: 0;
-    position: relative;
-    top: -7px;
-    font-family: Roboto-Regular,Roboto,sans-serif;
+	margin: 0;
+	position: relative;
+	top: -7px;
+	font-family: Roboto-Regular,Roboto,sans-serif;
 }

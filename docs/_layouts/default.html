@@ -8,53 +8,53 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta name="google-site-verification" content="cxNDclvi6JiNqeOmTv-F4HpMLAymUHUtkCcwEV-b9-g" />
 	<link rel="stylesheet" href="{{ site.baseurl }}/static/main.css" />
-	
+
 	<title>{{ page.title }} | UoA MediaplayerPlus</title>
 	<meta name="description" content="{{ page.description }}" />
 </head>
 
 <body>
-  <div class="nav">
-    <div class="container">
-      <a href='{{ site.baseurl }}/' >
-        <img src="{{ site.baseurl }}/static/logo-256.png" />
-        <span class="name">UoA MediaplayerPlus</span>
-      </a>
-      {% for item in site.data.navigation %}
-        <a class="link" href="{{ site.baseurl }}{{ item.link }}" {% if page.url == item.link %}style="font-weight: bold;"{% endif %}>
-          {{ item.name }}
-        </a>
-      {% endfor %}
-      {% if page.hero != true %}
-      <button class="right" onclick="window.location.href='{{ site.baseurl }}/'">Download Extension</button>
-      {% endif %}
-    </div>
-  </div>
-  {% if page.hero %}
+	<div class="nav">
+		<div class="container">
+			<a href='{{ site.baseurl }}/' >
+				<img src="{{ site.baseurl }}/static/logo-256.png" />
+				<span class="name">UoA MediaplayerPlus</span>
+			</a>
+			{% for item in site.data.navigation %}
+				<a class="link" href="{{ site.baseurl }}{{ item.link }}" {% if page.url == item.link %}style="font-weight: bold;"{% endif %}>
+					{{ item.name }}
+				</a>
+			{% endfor %}
+			{% if page.hero != true %}
+			<button class="right" onclick="window.location.href='{{ site.baseurl }}/'">Download Extension</button>
+			{% endif %}
+		</div>
+	</div>
+	{% if page.hero %}
 	<div class="hero" id="install">
 		<div class="container">
-      <h1>UoA MediaplayerPlus</h1>
-      <p>Improvements to the Mediaplayer used by the University of Auckland</p>
-      <button onclick="window.location.href='{{ site.urls.chrome }}'"><img class="icon" src="{{ site.baseurl }}/static/icons/chrome.svg">Add to Chrome</button>
-      <button onclick="window.location.href='{{ site.urls.firefox }}'"><img class="icon" src="{{ site.baseurl }}/static/icons/firefox.svg">Add to Firefox</button>
-      <button onclick="window.location.href='{{ site.urls.github }}'"><img class="icon" src="{{ site.baseurl }}/static/icons/github.svg">View on Github</button>
+			<h1>UoA MediaplayerPlus</h1>
+			<p>Improvements to the Mediaplayer used by the University of Auckland</p>
+			<button onclick="window.location.href='{{ site.urls.chrome }}'"><img class="icon" src="{{ site.baseurl }}/static/icons/chrome.svg">Add to Chrome</button>
+			<button onclick="window.location.href='{{ site.urls.firefox }}'"><img class="icon" src="{{ site.baseurl }}/static/icons/firefox.svg">Add to Firefox</button>
+			<button onclick="window.location.href='{{ site.urls.github }}'"><img class="icon" src="{{ site.baseurl }}/static/icons/github.svg">View on Github</button>
 		</div>
-  </div>
-  {% else %}
-  <div class="spacer"></div>
-  {% endif %}
-  <div class="container">
-    {{ content }}
-  </div>
-  <footer>
-    <div class="container">
-      <a href="{{ site.urls.github }}"><img class="icon" src="{{ site.baseurl }}/static/icons/github.svg"></a>
-      <a href="{{ site.urls.discord }}"><img class="icon" src="{{ site.baseurl }}/static/icons/discord.svg"></a>
-      <a href="{{ site.urls.matrix }}"><img class="icon" src="{{ site.baseurl }}/static/icons/matrix.svg"></a>
-      <p>Icons from <a href="https://fontawesome.com/license">Font Awesome</a>, licensed under the Creative Commons Attribution 4.0 International license. Brand icons are the trademarks of their respective owners.</p>
-    </div>
-  </footer>
-  
+	</div>
+	{% else %}
+	<div class="spacer"></div>
+	{% endif %}
+	<div class="container">
+		{{ content }}
+	</div>
+	<footer>
+		<div class="container">
+			<a href="{{ site.urls.github }}"><img class="icon" src="{{ site.baseurl }}/static/icons/github.svg"></a>
+			<a href="{{ site.urls.discord }}"><img class="icon" src="{{ site.baseurl }}/static/icons/discord.svg"></a>
+			<a href="{{ site.urls.matrix }}"><img class="icon" src="{{ site.baseurl }}/static/icons/matrix.svg"></a>
+			<p>Icons from <a href="https://fontawesome.com/license">Font Awesome</a>, licensed under the Creative Commons Attribution 4.0 International license. Brand icons are the trademarks of their respective owners.</p>
+		</div>
+	</footer>
+
 </body>
 
 </html>
